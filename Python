@@ -1,0 +1,4 @@
+Exploratory Data Analysis of the Titanic Dataset
+
+In this report, I analysed the data on the passengers aboard the Titanic to determine which factors were most closely associated with survival and then
+built a predictive model for it using a decision tree classifier.
