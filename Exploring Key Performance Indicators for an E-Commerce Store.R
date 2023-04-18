@@ -1,13 +1,12 @@
 # Exploring Key Performance Indicators for an E-Commerce store in R
 
-# This project aims to analsze a dataset from an e-commerce platform to uncover key performance indicators (KPIs) and growth opportunities.
+# This project aims to analyse a dataset from an e-commerce platform to uncover key performance indicators (KPIs) and growth opportunities.
 
 # Dataset used: https://www.kaggle.com/datasets/carrie1/ecommerce-data
 
 # Import Libraries
 library(tidyverse)
 library(lubridate)
-library(ggplot2)
 
 # Data Preprocessing 
 head(data)
@@ -86,8 +85,17 @@ print (mean(CLV$customer_revenue))
 # Revenue per Client: 1128.544
 # Average Customer Lifetime Value: 1128.544
 
-# Recommendations
-# Focus on high-growth period: It is suggested to capitalise on the high-growth period (December) by creating targeted marketing campaigns, offering seasonal promotions, and optimising inventory management.
-# Enhance customer retention strategies: The client retention rate stands at 55.9%, indicating that there is room for improvement in retaining customers. Implementing loyalty programs, offering personalised discounts, and providing excellent customer service can help increase repeat purchases and improve the overall retention rate.
-# Increase average order value (AOV): With an AOV of 369.48, there is potential to increase this metric by offering bundled products, upselling or cross-selling items, and providing incentives for customers to spend more during their purchases.
-# Focus on high-value customers: The average customer lifetime value is 1128.54. Identifying high-value customers and targeting them with tailored marketing campaigns can help improve revenue per client, which currently stands at 1128.54. Additionally, investing in acquiring new customers with similar characteristics to high-value customers can also contribute to revenue growth.
+# Recommendations:
+# Focus on high-growth period: It is suggested to capitalise on the high-growth period (December) by creating targeted marketing campaigns, offering 
+# seasonal promotions, and optimising inventory management.
+
+# Enhance customer retention strategies: The client retention rate stands at 55.9%, indicating that there is room for improvement in retaining customers. 
+# Implementing loyalty programs, offering personalised discounts, and providing excellent customer service can help increase repeat purchases and improve
+# the overall retention rate.
+
+# Increase average order value (AOV): With an AOV of 369.48, there is potential to increase this metric by offering bundled products, upselling or 
+# cross-selling items, and providing incentives for customers to spend more during their purchases.
+
+# Focus on high-value customers: The average customer lifetime value is 1128.54. Identifying high-value customers and targeting them with tailored 
+# marketing campaigns can help improve revenue per client, which currently stands at 1128.54. Additionally, investing in acquiring new customers with 
+# similar characteristics to high-value customers can also contribute to revenue growth.
