@@ -7,8 +7,8 @@ sales, platforms, publishers, genres, and critic and user ratings. By exploring 
 making in the video game industry.*/
 
 /* Dataset used: https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings 
-Before starting the analysis, I deleted the columns irrelevant to this exploration in Excel and then split the document into two different files: 
-ratings.csv and video_game_sales.csv.*/
+Before starting the analysis, I pre-processed the dataset in R and then split the document into two different files: video_game_sales.csv and
+ratings.csv.*/
 
 /* 1. Top 10 best-selling video game publishers
 This information is useful for businesses in identifying the most successful publishers in the industry. Collaborating with these top publishers can 
