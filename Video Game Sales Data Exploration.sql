@@ -77,3 +77,23 @@ JOIN ratings AS r ON v.Name = r.Name
 WHERE v.Global_Sales > 0 AND r.User_Score IS NOT NULL
 ORDER BY score_to_sales_ratio DESC
 LIMIT 10;
+
+/* 7. Most improved games in terms of User_Score over the years
+This query can highlight games that have improved in terms of user perception over the years, perhaps through updates or expansions. This could provide valuable 
+insights for businesses about the importance of post-launch support and continual improvement for maintaining or improving user perception. */
+
+WITH yearly_scores AS (
+    SELECT v.Name, v.Year_of_Release, r.User_Score,
+           LAG(r.User_Score) OVER(PARTITION BY v.Name ORDER BY v.Year_of_Release) as Previous_Year_Score
+    FROM video_game_sales v
+    JOIN ratings r ON v.Name = r.Name
+),
+score_diff AS (
+    SELECT Name, Year_of_Release, (User_Score - Previous_Year_Score) as Score_Change
+    FROM yearly_scores
+)
+SELECT Name, MAX(Score_Change) as Max_Score_Change
+FROM score_diff
+GROUP BY Name
+ORDER BY Max_Score_Change DESC
+LIMIT 10;
