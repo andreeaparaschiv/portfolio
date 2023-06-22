@@ -92,8 +92,9 @@ print (mean(CLV$customer_revenue))
 # (source: https://www.verfacto.com/blog/customer-lifetime-value/in-ecommerce/)
 
 # Recommendations:
-# Leverage high order value: the average order value is considerably higher than the industry standard, which indicates that the store's customers are
-# willing to spend more per order, thus it is worth considering introducing more premium or bundled products to further capitalise on this trend
+# Leverage high order value: the average order value is considerably higher than the industry standard, which indicates that the store's 
+# customers are willing to spend more per order, thus it is worth considering introducing more premium or bundled products to further
+# capitalise on this trend
 
 # Seasonal marketing: consider post-Christmas promotions to extend the December high growth into January, as per industry standards, while also 
 # improving June revenue growth through summer sales
