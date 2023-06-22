@@ -83,8 +83,7 @@ print (mean(CLV$customer_revenue))
 # Comparison with industry standards:
 # Average order value is significantly higher than the 128 industry standard (source: https://www.growcode.com/blog/average-order-value/)
 
-# The industry standard is that the month with the highest revenue growth is January due to post-Christmas discounting. That is not the case for this
-# store (source: https://webvizionglobal.com/what-are-the-best-and-worst-months-for-e-commerce/)
+# The industry standard is that the month with the highest revenue growth is January due to post-Christmas discounting
 
 # Client retention rate is higher than the 31% industry standard (source: https://www.gorgias.com/blog/ecommerce-retention-rate)
 
