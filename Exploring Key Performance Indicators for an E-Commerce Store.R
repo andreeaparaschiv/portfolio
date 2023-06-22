@@ -52,9 +52,6 @@ sd_growth = revenue_growth_summary$sd_growth
 high_growth = revenue_growth_df %>% filter(revenue_growth > mean_growth + sd_growth) %>% top_n(1, revenue_growth)
 low_growth = revenue_growth_df %>% filter(revenue_growth < mean_growth - sd_growth) %>% top_n(1, revenue_growth)
 
-# Calculate Revenue per Client
-revenue_per_client = total_revenue / total_visitors
-
 # Calculate Client Retention Rate
 repeat_customers = dataset_clean %>%
   group_by(CustomerID) %>%
@@ -73,7 +70,6 @@ CLV = dataset_clean %>%
 print (AOV)
 print (high_growth)
 print (low_growth)
-print (revenue_per_client)
 print (client_retention_rate * 100)
 print (mean(CLV$customer_revenue))
 
@@ -82,20 +78,24 @@ print (mean(CLV$customer_revenue))
 # Month with the Highest Revenue Growth: December
 # Month with the Lowest Revenue Growth: June
 # Client Retention Rate: 55.904 %
-# Revenue per Client: 1128.544
 # Average Customer Lifetime Value: 1128.544
 
+# Comparison with industry standards:
+# Average order value is significantly higher than the 128 industry standard (source: https://www.growcode.com/blog/average-order-value/)
+
+# The industry standard is that the month with the highest revenue growth is January due to post-Christmas discounting. That is not the case for this
+# store (source: https://webvizionglobal.com/what-are-the-best-and-worst-months-for-e-commerce/)
+
+# Client retention rate is higher than the 31% industry standard (source: https://www.gorgias.com/blog/ecommerce-retention-rate)
+
+# A good customer lifetime value is usually 3x higher than the customer acquisition costs 
+# (source: https://www.verfacto.com/blog/customer-lifetime-value/in-ecommerce/)
+
 # Recommendations:
-# Focus on high-growth period: It is suggested to capitalise on the high-growth period (December) by creating targeted marketing campaigns, offering 
-# seasonal promotions, and optimising inventory management.
+# Leverage high order value: the average order value is considerably higher than the industry standard, which indicates that the store's customers are
+# willing to spend more per order, thus it is worth considering introducing more premium or bundled products to further capitalise on this trend
 
-# Enhance customer retention strategies: The client retention rate stands at 55.9%, indicating that there is room for improvement in retaining customers. 
-# Implementing loyalty programs, offering personalised discounts, and providing excellent customer service can help increase repeat purchases and improve
-# the overall retention rate.
+# Seasonal marketing: consider post-Christmas promotions to extend the December high growth into January, as per industry standards, while also 
+# improving June revenue growth through summer sales
 
-# Increase average order value (AOV): With an AOV of 369.48, there is potential to increase this metric by offering bundled products, upselling or 
-# cross-selling items, and providing incentives for customers to spend more during their purchases.
-
-# Focus on high-value customers: The average customer lifetime value is 1128.54. Identifying high-value customers and targeting them with tailored 
-# marketing campaigns can help improve revenue per client, which currently stands at 1128.54. Additionally, investing in acquiring new customers with 
-# similar characteristics to high-value customers can also contribute to revenue growth.
+# Customer acquisition costs: ensure that the customer acquisition costs are less than 3x the customer lifetime value
